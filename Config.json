@@ -1,0 +1,40 @@
+{
+    "Cleanup": {
+        "EmptyRecycleBin": true,
+        "ClearWindowsTemp": true,
+        "ClearUserTemp": true,
+        "ClearPrefetch": false,
+        "ClearDirectXCache": true,
+        "ClearDeliveryOptimization": true,
+        "ClearWindowsUpdateCache": true,
+        "ClearThumbnailCache": true,
+        "ClearBrowserCaches": false
+    },
+    "Repair": {
+        "RunSFC": true,
+        "RunDISM": true,
+        "OptimizeComponentStore": true,
+        "RestartExplorer": true
+    },
+    "Updates": {
+        "WindowsUpdate": true,
+        "MicrosoftStore": true,
+        "WingetUpgrade": true,
+        "PowerShellModules": true
+    },
+    "Security": {
+        "UpdateDefender": true,
+        "RunQuickScan": true,
+        "RunFullScan": false
+    },
+    "Drivers": {
+        "CheckUpdates": true
+    },
+    "GHelper": {
+        "BackupConfig": true
+    },
+    "Safety": {
+        "CreateRestorePoint": true,
+        "ForceRebootCountdown": true
+    }
+}
