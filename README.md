@@ -79,7 +79,7 @@ Hosted securely on [GitHub](#). Contributions, pull requests, and forks are welc
 ## 📥 Download
 You can download the latest stable release directly from the GitHub Releases page or clone the repository:
 ```powershell
-git clone https://github.com/yourusername/Ultimate-Windows-Maintenance.git
+git clone https://github.com/your_username/Ultimate-Windows-Maintenance.git
 ```
 
 ---

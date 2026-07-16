@@ -70,7 +70,7 @@
 ## 📥 التحميل
 يمكنك تحميل أحدث إصدار مستقر مباشرة من صفحة GitHub، أو استنساخ المستودع:
 ```powershell
-git clone https://github.com/AdnanNaous/Ultimate-Windows-Maintenance.git
+git clone https://github.com/your_username/Ultimate-Windows-Maintenance.git
 ```
 
 ---
