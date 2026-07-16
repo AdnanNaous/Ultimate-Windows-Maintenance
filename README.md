@@ -77,6 +77,9 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
    ```
 
 > [!WARNING]
+> **SAVE YOUR WORK:** By default, this toolkit will **automatically restart your computer** when maintenance finishes (with a 30-second countdown) to flush memory and apply system repairs. Please save all your work and close other applications before running the script!
+
+> [!WARNING]
 > **DO NOT** open the `.ps1` file and copy-paste its contents directly into the PowerShell window. The script must be executed as a file using the command above so it can locate its configuration and modules!
 
 *(Note: To skip creating a System Restore Point, use the `-SkipRestorePoint` switch).*
