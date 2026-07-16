@@ -1,6 +1,6 @@
 # Ultimate Windows Maintenance Toolkit
 
-![Version](https://img.shields.io/badge/Version-v1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/Version-v1.0.1-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Stable-success.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-0078D6.svg)
 ![Requirements](https://img.shields.io/badge/Requirements-PowerShell%207-5391FE.svg)
@@ -42,10 +42,14 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
 *(Coming soon)*
 
 ## 🏷️ Version
-- **Current Release:** v1.0.0
+- **Current Release:** v1.0.1
 - **Status:** Stable
 
 ## 🔄 Changelog
+**v1.0.1 - Bug Fixes & Documentation**
+- Fixed COM exception in Recycle Bin cleanup.
+- Added estimated completion times to documentation.
+
 **v1.0.0 - Initial Release**
 - Kernel-Level code refactoring
 - Added rigorous `Invoke-SafeOperation` wrapper
