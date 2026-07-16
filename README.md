@@ -65,6 +65,10 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
    ```powershell
    .\Start-Maintenance.ps1
    ```
+
+> [!WARNING]
+> **DO NOT** open the `.ps1` file and copy-paste its contents directly into the PowerShell window. The script must be executed as a file using the command above so it can locate its configuration and modules!
+
 *(Note: To skip creating a System Restore Point, use the `-SkipRestorePoint` switch).*
 
 ## 💻 Source Code
