@@ -29,14 +29,14 @@ An enterprise-grade, kernel-level refactored maintenance toolkit designed specif
 The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professional utility designed to keep your Windows 11 system running at peak performance. It uses defensive programming, avoids dangerous registry tweaks, and enforces strict state management.
 
 ## ✨ Features
-- **Health Diagnostics:** Checks OS version, disk health (SMART), memory status, and Event Viewer critical errors.
-- **System Cleanup:** Safely cleans Windows/User Temp, DirectX caches, Windows Update caches, and the Recycle Bin. Handles locked files gracefully.
-- **System Repair:** Automates `sfc /scannow`, `DISM RestoreHealth`, and Component Store optimization with robust process timeouts.
-- **Updates:** Triggers Windows Update natively, upgrades packages via `winget`, and updates PowerShell modules.
-- **Drivers:** Safely detects AMD/NVIDIA drivers without forcefully uninstalling them.
-- **Security:** Updates Microsoft Defender signatures, runs background scans, and quarantines active threats.
-- **G-Helper Integration:** Detects G-Helper status and safely backs up its configuration file.
-- **Reporting:** Generates comprehensive run reports in JSON, TXT, and styled HTML formats.
+- **Health Diagnostics:** Checks OS version, disk health (SMART), memory status, and Event Viewer critical errors. *(Estimated time: 1-2 minutes)*
+- **System Cleanup:** Safely cleans Windows/User Temp, DirectX caches, Windows Update caches, and the Recycle Bin. Handles locked files gracefully. *(Estimated time: 1-3 minutes)*
+- **System Repair:** Automates `sfc /scannow`, `DISM RestoreHealth`, and Component Store optimization with robust process timeouts. *(Estimated time: 5-20 minutes)*
+- **Updates:** Triggers Windows Update natively, upgrades packages via `winget`, and updates PowerShell modules. *(Estimated time: 3-10 minutes)*
+- **Drivers:** Safely detects AMD/NVIDIA drivers without forcefully uninstalling them. *(Estimated time: < 10 seconds)*
+- **Security:** Updates Microsoft Defender signatures, runs background scans, and quarantines active threats. *(Estimated time: 2-30 minutes, depending on Quick/Full scan)*
+- **G-Helper Integration:** Detects G-Helper status and safely backs up its configuration file. *(Estimated time: < 5 seconds)*
+- **Reporting:** Generates comprehensive run reports in JSON, TXT, and styled HTML formats. *(Estimated time: < 5 seconds)*
 
 ## 📸 Screenshots
 *(Coming soon)*
