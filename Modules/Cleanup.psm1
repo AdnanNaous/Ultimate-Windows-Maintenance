@@ -126,10 +126,7 @@ function Clear-RecycleBinSafely {
     
     Invoke-SafeOperation -Description "Emptying Recycle Bin" -Operation {
         if ($PSCmdlet.ShouldProcess("All Drives", "Empty Recycle Bin")) {
-            # Uses COM to empty bin across all drives silently
-            $shell = [System.Activator]::CreateInstance([System.Type]::GetTypeFromProgID("Shell.Application"))
-            [void]$shell.NameSpace(0xA).Items().InvokeVerb("empty")
-            [System.Runtime.InteropServices.Marshal]::ReleaseComObject($shell) | Out-Null
+            [void](Clear-RecycleBin -Force -ErrorAction SilentlyContinue)
             Write-Log "Recycle bin emptied safely." -Level Info
         }
     }
