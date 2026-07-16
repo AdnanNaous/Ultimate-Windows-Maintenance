@@ -1,6 +1,6 @@
 # Ultimate Windows Maintenance Toolkit
 
-![Version](https://img.shields.io/badge/Version-v1.0.1-blue.svg)
+![Version](https://img.shields.io/badge/Version-v1.0.2-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Stable-success.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-0078D6.svg)
 ![Requirements](https://img.shields.io/badge/Requirements-PowerShell%207-5391FE.svg)
@@ -33,7 +33,7 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
 - **System Cleanup:** Safely cleans Windows/User Temp, DirectX caches, Windows Update caches, and the Recycle Bin. Handles locked files gracefully. *(Estimated time: 1-3 minutes)*
 - **System Repair:** Automates `sfc /scannow`, `DISM RestoreHealth`, and Component Store optimization with robust process timeouts. *(Estimated time: 5-20 minutes)*
 - **Updates:** Triggers Windows Update natively, upgrades packages via `winget`, and updates PowerShell modules. *(Estimated time: 3-10 minutes)*
-- **Drivers:** Safely detects AMD/NVIDIA drivers without forcefully uninstalling them. *(Estimated time: < 10 seconds)*
+- **Drivers:** Safely detects AMD, NVIDIA, and Intel drivers without forcefully uninstalling them. *(Estimated time: < 10 seconds)*
 - **Security:** Updates Microsoft Defender signatures, runs background scans, and quarantines active threats. *(Estimated time: 2-30 minutes, depending on Quick/Full scan)*
 - **G-Helper Integration:** Detects G-Helper status and safely backs up its configuration file. *(Estimated time: < 5 seconds)*
 - **Reporting:** Generates comprehensive run reports in JSON, TXT, and styled HTML formats. *(Estimated time: < 5 seconds)*
@@ -42,10 +42,14 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
 *(Coming soon)*
 
 ## 🏷️ Version
-- **Current Release:** v1.0.1
+- **Current Release:** v1.0.2
 - **Status:** Stable
 
 ## 🔄 Changelog
+**v1.0.2 - Intel GPU Support**
+- Added detection for Intel integrated and discrete GPUs.
+- Added official Intel Driver & Support Assistant (DSA) recommendations.
+
 **v1.0.1 - Bug Fixes & Documentation**
 - Fixed COM exception in Recycle Bin cleanup.
 - Added estimated completion times to documentation.

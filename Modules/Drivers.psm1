@@ -18,6 +18,7 @@ function Get-DriverStatus {
             
             $nvidiaFound = $false
             $amdFound = $false
+            $intelFound = $false
             
             if ($videoControllers) {
                 foreach ($vc in $videoControllers) {
@@ -30,12 +31,16 @@ function Get-DriverStatus {
                             $amdFound = $true
                             Write-Log "Detected AMD GPU: $($vc.Name) [Driver: $($vc.DriverVersion)]" -Level Info
                         }
+                        elseif ($vc.Name.Contains("Intel", [System.StringComparison]::OrdinalIgnoreCase)) {
+                            $intelFound = $true
+                            Write-Log "Detected Intel GPU: $($vc.Name) [Driver: $($vc.DriverVersion)]" -Level Info
+                        }
                     }
                 }
             }
             
-            if (-not $nvidiaFound -and -not $amdFound) {
-                Write-Log "No discrete NVIDIA or AMD adapters identified." -Level Warning
+            if (-not $nvidiaFound -and -not $amdFound -and -not $intelFound) {
+                Write-Log "No discrete or integrated NVIDIA, AMD, or Intel adapters identified." -Level Warning
             }
         }
         finally {
@@ -51,6 +56,7 @@ function Show-DriverUpdateInstructions {
     Write-Log "Driver maintenance operates in Notify-Only mode to preserve system stability." -Level Info
     Write-Log "For NVIDIA: Recommend 'NVCleanstall' or Official Custom 'Clean Install' option." -Level Info
     Write-Log "For AMD: Recommend Adrenalin installer 'Factory Reset' option." -Level Info
+    Write-Log "For Intel: Recommend official 'Intel Driver & Support Assistant' (DSA)." -Level Info
 }
 
 Export-ModuleMember -Function Get-DriverStatus, Show-DriverUpdateInstructions
