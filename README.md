@@ -9,6 +9,8 @@
 
 An enterprise-grade, kernel-level refactored maintenance toolkit designed specifically for Windows 11 systems, tailored for modern hardware (like ASUS ROG laptops featuring AMD Ryzen CPUs and NVIDIA RTX GPUs).
 
+[اقرأ باللغة العربية](README-ar.md)
+
 ---
 
 ## 📋 Table of Contents
