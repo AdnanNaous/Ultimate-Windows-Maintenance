@@ -17,8 +17,8 @@ function Repair-WindowsImage {
             $pInfo = [System.Diagnostics.ProcessStartInfo]::new()
             $pInfo.FileName = "dism.exe"
             $pInfo.Arguments = "/Online /Cleanup-Image /RestoreHealth"
-            $pInfo.UseShellExecute = $false
-            $pInfo.CreateNoWindow = $true
+            $pInfo.UseShellExecute = $true
+            $pInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
             
             $process = [System.Diagnostics.Process]::Start($pInfo)
             $process.WaitForExit(3600000) # 1 hour timeout
@@ -48,8 +48,8 @@ function Repair-SystemFiles {
             $pInfo = [System.Diagnostics.ProcessStartInfo]::new()
             $pInfo.FileName = "sfc.exe"
             $pInfo.Arguments = "/scannow"
-            $pInfo.UseShellExecute = $false
-            $pInfo.CreateNoWindow = $true
+            $pInfo.UseShellExecute = $true
+            $pInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
             
             $process = [System.Diagnostics.Process]::Start($pInfo)
             $process.WaitForExit(3600000) # 1 hour timeout
@@ -79,8 +79,8 @@ function Optimize-ComponentStore {
             $pInfo = [System.Diagnostics.ProcessStartInfo]::new()
             $pInfo.FileName = "dism.exe"
             $pInfo.Arguments = "/Online /Cleanup-Image /StartComponentCleanup"
-            $pInfo.UseShellExecute = $false
-            $pInfo.CreateNoWindow = $true
+            $pInfo.UseShellExecute = $true
+            $pInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
             
             $process = [System.Diagnostics.Process]::Start($pInfo)
             $process.WaitForExit(1800000) # 30 min timeout

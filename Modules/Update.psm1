@@ -28,8 +28,8 @@ function Update-Windows {
             $pInfo = [System.Diagnostics.ProcessStartInfo]::new()
             $pInfo.FileName = "usoclient.exe"
             $pInfo.Arguments = "StartScan"
-            $pInfo.UseShellExecute = $false
-            $pInfo.CreateNoWindow = $true
+            $pInfo.UseShellExecute = $true
+            $pInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
             
             $process = [System.Diagnostics.Process]::Start($pInfo)
             $process.WaitForExit(60000) # 60s timeout for triggering the scan
@@ -57,8 +57,8 @@ function Update-WingetPackages {
             $pInfo = [System.Diagnostics.ProcessStartInfo]::new()
             $pInfo.FileName = $wingetPath
             $pInfo.Arguments = "upgrade --all --include-unknown --accept-package-agreements --accept-source-agreements --silent"
-            $pInfo.UseShellExecute = $false
-            $pInfo.CreateNoWindow = $true
+            $pInfo.UseShellExecute = $true
+            $pInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
             
             $process = [System.Diagnostics.Process]::Start($pInfo)
             $process.WaitForExit(1800000) # 30 mins
