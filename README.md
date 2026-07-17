@@ -72,6 +72,12 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
    .\Start-Maintenance.ps1
    ```
 
+### Troubleshooting: Script won't run?
+If Windows blocks the script with a red error (like "cannot be loaded" or "not digitally signed"), this is because of PowerShell's Execution Policy. You can safely bypass it by copying and pasting this exact command instead:
+```powershell
+pwsh.exe -ExecutionPolicy Bypass -File .\Start-Maintenance.ps1
+```
+
 > [!WARNING]
 > **SAVE YOUR WORK:** By default, this toolkit will **automatically restart your computer** when maintenance finishes (with a 30-second countdown) to flush memory and apply system repairs. Please save all your work and close other applications before running the script!
 
