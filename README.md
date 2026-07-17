@@ -16,7 +16,6 @@ An enterprise-grade, kernel-level refactored maintenance toolkit designed specif
 ## 📋 Table of Contents
 - [Description](#description)
 - [Features](#features)
-- [Screenshots](#screenshots)
 - [Version](#version)
 - [Changelog](#changelog)
 - [Documentation](#documentation)
@@ -37,9 +36,6 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
 - **Security:** Updates Microsoft Defender signatures, runs background scans, and quarantines active threats. *(Estimated time: 2-30 minutes, depending on Quick/Full scan)*
 - **G-Helper Integration:** Detects G-Helper status and safely backs up its configuration file. *(Estimated time: < 5 seconds)*
 - **Reporting:** Generates comprehensive run reports in JSON, TXT, and styled HTML formats. *(Estimated time: < 5 seconds)*
-
-## 📸 Screenshots
-*(Coming soon)*
 
 ## 🏷️ Version
 - **Current Release:** v1.0.2
