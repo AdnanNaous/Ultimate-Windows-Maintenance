@@ -76,6 +76,88 @@
 pwsh.exe -ExecutionPolicy Bypass -File .\Start-Maintenance.ps1
 ```
 
+الخطأ واضح من الصورة.
+
+أنت الآن داخل:
+
+```text
+C:\Windows\System32
+```
+
+وأنت كتبت:
+
+```powershell
+pwsh.exe -ExecutionPolicy Bypass -File .\Start-Maintenance.ps1
+```
+
+لكن الملف **ليس موجودًا داخل System32**، لذلك PowerShell أعطاك:
+
+> `.\Start-Maintenance.ps1` is not recognized as the name of a script file
+
+---
+
+## الحل الأول (الأفضل)
+
+اذهب أولًا إلى المجلد الذي يوجد فيه السكربت.
+
+مثلاً إذا كان داخل:
+
+```text
+C:\Projects\Ultimate-Windows-Maintenance
+```
+
+نفذ:
+
+```powershell
+cd "C:\Projects\Ultimate-Windows-Maintenance"
+```
+
+ثم:
+
+```powershell
+pwsh -ExecutionPolicy Bypass -File .\Start-Maintenance.ps1
+```
+
+---
+
+## الحل الثاني
+
+شغله مباشرة بالمسار الكامل:
+
+```powershell
+pwsh -ExecutionPolicy Bypass -File "C:\Projects\Ultimate-Windows-Maintenance\Start-Maintenance.ps1"
+```
+
+(غيّر المسار إذا كان الملف في مكان آخر.)
+
+---
+
+## إذا لا تعرف أين يوجد الملف
+
+ابحث عنه بالأمر:
+
+```powershell
+Get-ChildItem C:\ -Filter Start-Maintenance.ps1 -Recurse -ErrorAction SilentlyContinue
+```
+
+أو إذا تعرف المجلد تقريبًا:
+
+```powershell
+Get-ChildItem "C:\Projects" -Filter Start-Maintenance.ps1 -Recurse
+```
+
+---
+
+### أريد التأكد من مكان الملف
+
+نفذ هذا الأمر وأرسل الناتج:
+
+```powershell
+Get-ChildItem "C:\Projects" -Recurse -Filter Start-Maintenance.ps1
+```
+
+إذا لم يظهر شيء، فأخبرني أين خزنت مشروع **Ultimate-Windows-Maintenance** أو أرسل لقطة شاشة لمحتويات المجلد، وسأعطيك الأمر الصحيح مباشرة.
+
 > [!WARNING]
 > **احفظ عملك أولاً:** افتراضياً، ستقوم الأداة **بإعادة تشغيل حاسوبك تلقائياً** عند انتهاء الصيانة (مع عد تنازلي لمدة 30 ثانية) لتفريغ الذاكرة وتطبيق إصلاحات النظام. يرجى حفظ جميع أعمالك وإغلاق البرامج المفتوحة قبل تشغيل السكربت!
 
