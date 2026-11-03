@@ -1,13 +1,11 @@
 # Ultimate Windows Maintenance Toolkit
 
 ![Version](https://img.shields.io/badge/Version-v1.0.2-blue.svg)
-![Status](https://img.shields.io/badge/Status-Stable-success.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-0078D6.svg)
 ![Requirements](https://img.shields.io/badge/Requirements-PowerShell%207-5391FE.svg)
-![Downloads](https://img.shields.io/badge/Downloads-15K-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-An enterprise-grade, kernel-level refactored maintenance toolkit designed specifically for Windows 11 systems, tailored for modern hardware (like ASUS ROG laptops featuring AMD Ryzen CPUs and NVIDIA RTX GPUs).
+A modular PowerShell maintenance toolkit for Windows 11, with diagnostics, cleanup, repair and update operations. Review the scripts and Config.json before running with administrator privileges; operations can remove files, change the system and restart Windows.
 
 [اقرأ باللغة العربية](README-ar.md)
 
@@ -25,7 +23,7 @@ An enterprise-grade, kernel-level refactored maintenance toolkit designed specif
 ---
 
 ## 📝 Description
-The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professional utility designed to keep your Windows 11 system running at peak performance. It uses defensive programming, avoids dangerous registry tweaks, and enforces strict state management.
+The toolkit groups Windows maintenance tasks into PowerShell modules. Back up important files first; a restore point is not a complete backup, and successful static checks do not establish runtime safety.
 
 ## ✨ Features
 - **Health Diagnostics:** Checks OS version, disk health (SMART), memory status, and Event Viewer critical errors. *(Estimated time: 1-2 minutes)*
@@ -39,7 +37,7 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
 
 ## 🏷️ Version
 - **Current Release:** v1.0.2
-- **Status:** Stable
+- **Validation:** See workflow results for syntax checks; system maintenance needs separate testing on a disposable Windows environment.
 
 ## 🔄 Changelog
 **v1.0.2 - Intel GPU Support**
@@ -51,7 +49,7 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
 - Added estimated completion times to documentation.
 
 **v1.0.0 - Initial Release**
-- Kernel-Level code refactoring
+- PowerShell module refactoring
 - Added rigorous `Invoke-SafeOperation` wrapper
 - Implemented robust `Remove-LockedItem` for safe I/O operations
 - Integrated System Restore Point checkpoints
@@ -73,7 +71,7 @@ The Ultimate Windows Maintenance Toolkit is a highly modular, safe, and professi
    ```
 
 ### Troubleshooting: Script won't run?
-If Windows blocks the script with a red error (like "cannot be loaded" or "not digitally signed"), this is because of PowerShell's Execution Policy. You can safely bypass it by copying and pasting this exact command instead:
+If Windows blocks the script with a red error (like "cannot be loaded" or "not digitally signed"), this is because of PowerShell's Execution Policy. Verify the source and review the scripts first. The following command bypasses execution-policy checks for this process; it does not establish that the script is safe. Use it only if you understand and accept the script’s system changes:
 ```powershell
 pwsh.exe -ExecutionPolicy Bypass -File .\Start-Maintenance.ps1
 ```
@@ -87,12 +85,12 @@ pwsh.exe -ExecutionPolicy Bypass -File .\Start-Maintenance.ps1
 *(Note: To skip creating a System Restore Point, use the `-SkipRestorePoint` switch).*
 
 ## 💻 Source Code
-Hosted securely on [GitHub](#). Contributions, pull requests, and forks are welcome!
+Source is available on [GitHub](https://github.com/AdnanNaous/Ultimate-Windows-Maintenance). Contributions, pull requests, and forks are welcome!
 
 ## 📥 Download
-You can download the latest stable release directly from the GitHub Releases page or clone the repository:
+No GitHub release is currently published. Review the source at a specific commit or clone the repository:
 ```powershell
-git clone https://github.com/your_username/Ultimate-Windows-Maintenance.git
+git clone https://github.com/AdnanNaous/Ultimate-Windows-Maintenance.git
 ```
 
 ---
