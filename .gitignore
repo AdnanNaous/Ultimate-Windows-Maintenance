@@ -1,0 +1,10 @@
+
+# Local credentials; inspect tracked files and history separately.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
